@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f6f9; color: #333; }
+header, footer { background: #2c3e50; color: white; text-align: center; padding: 1rem; }
+nav { background: #34495e; display: flex; justify-content: center; padding: 0.5rem; }
+.tablink { background: #1abc9c; border: none; color: white; padding: 0.75rem 1.5rem; margin: 0 0.2rem; cursor: pointer; border-radius: 6px; }
+.tabcontent { display: none; padding: 1rem 2rem; }
+.tabcontent.active { display: block; background: white; margin: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+textarea { width: 100%; height: 80px; margin: 0.5rem 0; padding: 0.5rem; }
+input { margin: 0.3rem 0; padding: 0.4rem; }
+.actions button { margin: 0.3rem; padding: 0.5rem 1rem; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; }
+.actions button:hover { background: #2980b9; }

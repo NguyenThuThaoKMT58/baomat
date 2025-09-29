@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bộ công cụ Mã hóa Cổ điển</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bộ công cụ Mã hóa Cổ điển</h1>
+        <p>Thử nghiệm các phương pháp mã hóa và giải mã: Caesar, Affine, Hoán vị cột, Vigenère, Playfair</p>
+    </header>
+
+    <nav>
+        <button class="tablink" onclick="openTab('caesar')">Caesar</button>
+        <button class="tablink" onclick="openTab('affine')">Affine</button>
+        <button class="tablink" onclick="openTab('columnar')">Hoán vị cột</button>
+        <button class="tablink" onclick="openTab('vigenere')">Vigenère</button>
+        <button class="tablink" onclick="openTab('playfair')">Playfair</button>
+    </nav>
+
+    <main>
+        <!-- Caesar -->
+        <section id="caesar" class="tabcontent">
+            <h2>Mã hóa Caesar</h2>
+            <label>Văn bản:</label>
+            <textarea id="caesarText"></textarea>
+            <label>Khóa (số):</label>
+            <input type="number" id="caesarKey" value="3">
+            <div class="actions">
+                <button onclick="caesarEncrypt()">Mã hóa</button>
+                <button onclick="caesarDecrypt()">Giải mã</button>
+            </div>
+            <pre id="caesarResult"></pre>
+        </section>
+
+        <!-- Affine -->
+        <section id="affine" class="tabcontent">
+            <h2>Mã hóa Affine</h2>
+            <label>Văn bản:</label>
+            <textarea id="affineText"></textarea>
+            <label>Khóa a:</label>
+            <input type="number" id="affineA" value="5">
+            <label>Khóa b:</label>
+            <input type="number" id="affineB" value="8">
+            <div class="actions">
+                <button onclick="affineEncrypt()">Mã hóa</button>
+                <button onclick="affineDecrypt()">Giải mã</button>
+            </div>
+            <pre id="affineResult"></pre>
+        </section>
+
+        <!-- Columnar -->
+        <section id="columnar" class="tabcontent">
+            <h2>Mã hóa Hoán vị Cột</h2>
+            <label>Văn bản:</label>
+            <textarea id="columnarText"></textarea>
+            <label>Khóa (chuỗi):</label>
+            <input type="text" id="columnarKey" value="KEYWORD">
+            <div class="actions">
+                <button onclick="columnarEncrypt()">Mã hóa</button>
+                <button onclick="columnarDecrypt()">Giải mã</button>
+            </div>
+            <pre id="columnarResult"></pre>
+        </section>
+
+        <!-- Vigenere -->
+        <section id="vigenere" class="tabcontent">
+            <h2>Mã hóa Vigenère</h2>
+            <label>Văn bản:</label>
+            <textarea id="vigenereText"></textarea>
+            <label>Khóa (chuỗi):</label>
+            <input type="text" id="vigenereKey" value="LEMON">
+            <div class="actions">
+                <button onclick="vigenereEncrypt()">Mã hóa</button>
+                <button onclick="vigenereDecrypt()">Giải mã</button>
+            </div>
+            <pre id="vigenereResult"></pre>
+        </section>
+
+        <!-- Playfair -->
+        <section id="playfair" class="tabcontent">
+            <h2>Mã hóa Playfair</h2>
+            <label>Văn bản:</label>
+            <textarea id="playfairText"></textarea>
+            <label>Khóa (chuỗi):</label>
+            <input type="text" id="playfairKey" value="KEYWORD">
+            <div class="actions">
+                <button onclick="playfairEncrypt()">Mã hóa</button>
+                <button onclick="playfairDecrypt()">Giải mã</button>
+            </div>
+            <pre id="playfairResult"></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Công cụ học tập mã hóa cổ điển</p>
+    </footer>
+</body>
+</html>
